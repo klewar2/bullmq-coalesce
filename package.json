@@ -1,0 +1,60 @@
+{
+  "name": "bullmq-coalesce",
+  "version": "0.1.0",
+  "description": "A BullMQ wrapper that implements debounced/coalesced job execution. Prevents duplicate delayed jobs by resetting their delay timer instead of creating duplicates.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "bullmq",
+    "queue",
+    "coalesce",
+    "debounce",
+    "delayed",
+    "jobs",
+    "redis",
+    "worker"
+  ],
+  "author": "Florian Roberge",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klewar2/bullmq-coalesce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/klewar2/bullmq-coalesce/issues"
+  },
+  "homepage": "https://github.com/klewar2/bullmq-coalesce#readme",
+  "peerDependencies": {
+    "bullmq": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "redis": {
+      "optional": true
+    }
+  },
+  "optionalPeerDependencies": {
+    "redis": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^8",
+    "@typescript-eslint/parser": "^8",
+    "bullmq": "^5",
+    "eslint": "^9",
+    "typescript": "^5",
+    "vitest": "^2"
+  }
+}
